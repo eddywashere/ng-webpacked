@@ -24,6 +24,7 @@ if (process.env.NODE_ENV === 'production') {
       warnings: false
     }
   }));
+  config.devtool = 'source-map';
 }
 
 module.exports = config;
