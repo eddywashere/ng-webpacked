@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body ng-controller="MainCtrl as main">
+
+<div class="container">
+  <ul class="nav nav-pills">
+    <li role="presentation" ui-sref-active="active"><a ui-sref="home">Home</a></li>
+    <li role="presentation" ui-sref-active="active"><a ui-sref="about">About</a></li>
+  </ul>
+  <hr>
+  <div class="row">
+    <div class="col-md-12" ui-view>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>ello world!</h3>
+      <table class="table">
+       <thead>
+         <tr>
+           <th>Name</th>
+           <th>Detail</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr ng-repeat="thing in main.things">
+           <td>{{thing}}</td>
+           <td></td>
+         </tr>
+       </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="build/main.bundle.js"></script>
+
+</body>
+</html>
