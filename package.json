@@ -5,11 +5,12 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --colors",
+    "build": "NODE_ENV=production webpack --progress --colors",
     "watch-webpack": "webpack --progress --colors --watch",
     "watch-server": "http-server -p 8000",
     "watch": "npm run watch-webpack & npm run watch-server",
-    "start": "npm run watch"
+    "start": "npm run watch",
+    "prod": "NODE_ENV=production npm start"
   },
   "author": "",
   "license": "ISC",
