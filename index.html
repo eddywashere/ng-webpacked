@@ -5,11 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="build/main.css" type="text/css" />
 </head>
 <body ng-controller="MainCtrl as main">
-
 <div class="container">
   <ul class="nav nav-pills">
     <li role="presentation" ui-sref-active="active"><a ui-sref="home">Home</a></li>
@@ -37,11 +35,12 @@
          </tr>
        </tbody>
       </table>
+      <linechart data='main.data' options='main.options' height="500"></linechart>
     </div>
   </div>
 </div>
-
-<script src="build/main.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="build/main.js"></script>
 
 </body>
 </html>
